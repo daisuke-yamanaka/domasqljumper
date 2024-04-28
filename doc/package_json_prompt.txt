@@ -1,0 +1,9 @@
+以下のとおり、修正してください。
+- バージョン番号は「1.0.0」とします。
+- activationEventsは
+- コマンド名は「domasqljumper. jumpSqlOrDao」。
+  タイトルは「Doma SQL Jumper: Jump SQL or Dao」。
+　このコマンドは「activationEvents」には定義しません。
+- キーバインド（ショートカットキー）は「ctrl+alt+0」、editorTextFocusの時。
+- コンテキストメニューからも使えるようにします。
+  グループ名は「domaSqlJumper@1」。

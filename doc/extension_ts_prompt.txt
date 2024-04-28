@@ -1,0 +1,37 @@
+domasqlcreator.jumpDaoToSqlが実行されたら、以下の処理を実行してください。
+- ファイルの拡張子がjava、またはsql、またはscriptであること。どちらでもない場合、エラーメッセージを表示して終了する。
+- 拡張子がjavaの場合
+ - ファイルの中身に「interface」および「@Dao」という文字列が存在していること。存在していない場合、エラーメッセージを表示して終了する。
+ - 選択している行のテキストから、メソッド名を抽出し、変数methodNameに保存する。
+  （例）List<MCareer> selectAll(SelectOptions options); → methodName=selectAll
+ - 選択しているファイルのパッケージ名を取得し、変数packageNameに保存する。
+  （例）package crfwsp3.db.dao.doma; → packageName=crfwsp3.db.dao.doma
+ - packageNameの中身のピリオドはスラッシュに置き換える。
+  （例）crfwsp3.db.dao.doma → crfwsp3/db/dao/doma
+ - 選択している行の一つ上の行に@Scriptがついていないか確認して、変数isScriptに保存する。
+ - 選択しているファイル名の拡張子を除去して、ファイルタイトルを取得し、変数fileTitleに保存する。
+  （例）MCareerDao.java → fileTitle=MCareerDao
+ - 選択された行の一つ上の行に@Scriptがついていないか確認して、変数isScriptに保存する。
+ - isScriptがtrueの場合、開くファイルの拡張子（変数fileExtension）はscriptとする。falseの場合はsqlとする。
+ - プロジェクト内の「src/main/java/META-INF/(packageName)/(fileTitle)/(methodName).(fileExtension)」というファイルを検索する。
+  対象ファイルが見つかれば開く。
+  対象ファイルが見つからなければ、確認ダイアログを表示し、OKなら新規作成して開く。
+  確認ダイアログのメッセージは「Do you want to create a new file?」とし、選択肢は「OK」と「Cancel」とする。
+- 拡張子がsqlまたはscriptの場合
+ - 選択しているファイル名の拡張子を除去して、ファイルタイトルを取得し、変数fileTitleに保存する。
+  （例）selectAll.sql → fileTitle=selectAll
+ - 選択しているファイルの親ディレクトリ名を取得し、変数parentDirNameに保存する。
+   ディレクトリの区切りは「\」ではなく、「/」とする。
+  （例）src/main/java/META-INF/crfwsp3/db/dao/doma/MCareerDao → parentDirName=src/main/java/META-INF/crfwsp3/db/dao/doma/MCareerDao
+ - parentDirNameから「META-INF/」部分を除去する。
+  （例）src/main/java/META-INF/crfwsp3/db/dao/doma/MCareerDao → src/main/java/crfwsp3/db/dao/doma/MCareerDao
+ - parentDirNameの最後のスラッシュから後ろの文字列を取得し、変数fileTitleに保存する。
+  （例）src/main/java/crfwsp3/db/dao/doma/MCareerDao → fileTItle=MCareerDao
+ - parentDirNameはfileTitleの部分を除去する.
+  （例）src/main/java/crfwsp3/db/dao/doma/MCareerDao → parentDirName=src/main/java/crfwsp3/db/dao/doma/
+ - プロジェクト内の「(parentDirName).java」というファイルを検索する。
+   この時、プロジェクトのルートパスを付与しない。
+   対象ファイルが見つかれば開く。
+   対象ファイルが見つからなければ、エラーメッセージを表示して終了する。
+ - 開いたファイル内からfileTitleのメソッドへカーソルを移動する。
+   （例）fileTitle=selectAll → List<MCareer> selectAll(SelectOptions options);
