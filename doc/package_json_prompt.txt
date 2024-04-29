@@ -1,9 +1,9 @@
-�ȉ��̂Ƃ���A�C�����Ă��������B
-- �o�[�W�����ԍ��́u1.0.0�v�Ƃ��܂��B
-- activationEvents��
-- �R�}���h���́udomasqljumper. jumpSqlOrDao�v�B
-  �^�C�g���́uDoma SQL Jumper: Jump SQL or Dao�v�B
-�@���̃R�}���h�́uactivationEvents�v�ɂ͒�`���܂���B
-- �L�[�o�C���h�i�V���[�g�J�b�g�L�[�j�́uctrl+alt+0�v�AeditorTextFocus�̎��B
-- �R���e�L�X�g���j���[������g����悤�ɂ��܂��B
-  �O���[�v���́udomaSqlJumper@1�v�B
+以下のとおり、修正してください。
+- バージョン番号は「1.0.0」とする。
+- activationEventsは空要素（未指定）とする。
+- コマンド名は「domasqljumper.jumpSqlOrDao」とする。
+  タイトルは「Doma SQL Jumper: Jump SQL or Dao」とする。
+　このコマンドは「activationEvents」には定義しません。
+- キーバインド（ショートカットキー）は「ctrl+alt+0」とする。editorTextFocusの時に有効とする。
+- コンテキストメニューからも使えるようにする。editorFocusの時とする。
+  グループ名は「domasqljumper@1」とする。

@@ -1,4 +1,4 @@
-domasqlcreator.jumpDaoToSqlが実行されたら、以下の処理を実行してください。
+domasqljumper.jumpSqlOrDaoが実行されたら、以下の処理を実行してください。
 - ファイルの拡張子がjava、またはsql、またはscriptであること。どちらでもない場合、エラーメッセージを表示して終了する。
 - 拡張子がjavaの場合
  - ファイルの中身に「interface」および「@Dao」という文字列が存在していること。存在していない場合、エラーメッセージを表示して終了する。

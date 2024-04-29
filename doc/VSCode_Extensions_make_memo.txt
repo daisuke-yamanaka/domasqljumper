@@ -59,10 +59,6 @@ README.mdを編集する。
 CHANGELOG.mdを編集する。
 
 --------------------------------------------------------------------------------
-ターミナルで以下を実行する。
-npx vsce package
-
---------------------------------------------------------------------------------
 拡張機能の公開
 https://code.visualstudio.com/api/working-with-extensions/publishing-extension
 
