@@ -63,4 +63,11 @@ CHANGELOG.mdを編集する。
 npx vsce package
 
 --------------------------------------------------------------------------------
+拡張機能の公開
+https://code.visualstudio.com/api/working-with-extensions/publishing-extension
+
+npm install -g @vscode/vsce
+vsce package
+vsce publish
+
 --------------------------------------------------------------------------------
