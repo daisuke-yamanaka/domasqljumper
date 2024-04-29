@@ -2,12 +2,16 @@
   "name": "domasqljumper",
   "displayName": "Doma SQL Jumper",
   "description": "You can open the associated SQL file from Doma's Dao interface. You can also do the opposite.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.86.0"
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "sql",
+    "doma"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
