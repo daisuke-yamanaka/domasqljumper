@@ -5,5 +5,5 @@
   タイトルは「Doma SQL Jumper: Jump SQL or Dao」とする。
 　このコマンドは「activationEvents」には定義しません。
 - キーバインド（ショートカットキー）は「ctrl+alt+0」とする。editorTextFocusの時に有効とする。
-- コンテキストメニューからも使えるようにする。editorFocusの時とする。
+- コンテキストメニューからも使えるようにする。editorFocusの時に有効とする。
   グループ名は「domasqljumper@1」とする。
