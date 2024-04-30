@@ -8,7 +8,6 @@ domasqljumper.jumpSqlOrDaoが実行されたら、以下の処理を実行して
   （例）package crfwsp3.db.dao.doma; → packageName=crfwsp3.db.dao.doma
  - packageNameの中身のピリオドはスラッシュに置き換える。
   （例）crfwsp3.db.dao.doma → crfwsp3/db/dao/doma
- - 選択している行の一つ上の行に@Scriptがついていないか確認して、変数isScriptに保存する。
  - 選択しているファイル名の拡張子を除去して、ファイルタイトルを取得し、変数fileTitleに保存する。
   （例）MCareerDao.java → fileTitle=MCareerDao
  - 選択された行の一つ上の行に@Scriptがついていないか確認して、変数isScriptに保存する。
