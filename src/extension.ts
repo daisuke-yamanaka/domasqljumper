@@ -57,8 +57,9 @@ export function activate(context: vscode.ExtensionContext) {
 			const isScript = previousLineText.includes('@Script');
 
 			const fileExtension = isScript ? 'script' : 'sql';
-			const sqlFilePath = `src/main/java/META-INF/${packageName}/${fileTitle}/${methodName}.${fileExtension}`;
-			let sqlFileUri = vscode.Uri.file(vscode.workspace.rootPath + '/' + sqlFilePath);
+			const basePath = document.uri.path.substring(0, document.uri.path.indexOf(packageName));
+			const sqlFilePath = `${basePath}/META-INF/${packageName}/${fileTitle}/${methodName}.${fileExtension}`;
+			let sqlFileUri = vscode.Uri.file(sqlFilePath);
 
 			try {
 				// Open SQL file
