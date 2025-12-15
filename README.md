@@ -23,6 +23,15 @@ none.
 
 ## Release Notes
 
+### 1.0.2
+
+- Bump glob from 10.3.12 to 10.5.0
+
+### 1.0.1
+
+- Fix SQL file navigation for subprojects - use dynamic base path detection
+- Fix path construction - remove double slash in SQL file path
+
 ### 1.0.0
 
 Initial release of Doma SQL Jumper.
