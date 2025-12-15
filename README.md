@@ -72,6 +72,10 @@ none.
 
 ## Release Notes
 
+### 1.0.3
+
+- Update dependencies
+
 ### 1.0.2
 
 - Bump glob from 10.3.12 to 10.5.0
