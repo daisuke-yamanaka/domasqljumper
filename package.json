@@ -1,6 +1,6 @@
 {
-  "name": "domasqljumper",
-  "displayName": "Doma SQL Jumper",
+  "name": "domasqljumper2",
+  "displayName": "Doma SQL Jumper2",
   "description": "You can open the associated SQL file from Doma's Dao interface. You can also do the opposite.",
   "version": "1.0.3",
   "engines": {
@@ -44,7 +44,7 @@
     "type": "git",
     "url": "https://github.com/daisuke-yamanaka/domasqljumper"
   },
-  "publisher": "daisuke-yamanaka",
+  "publisher": "daisuke-yamanaka-cr",
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
